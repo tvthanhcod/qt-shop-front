@@ -1,4 +1,4 @@
-import React,{ useState }  from "react";
+import React,{ useState, useEffect }  from "react";
 import {  Link ,NavLink } from "react-router-dom";
 
 import classNames from "classnames/bind"
@@ -14,14 +14,25 @@ const cx = classNames.bind(styles)
 
 const Card = (props) => {
 
+  const [lists, setList] = useState([])
+
+  useEffect(() => {
+    setList([...lists, props])
+  },[])
+
+
+      console.log(props)
      return (
-    <div className={cx('container')}>
+       <div className={cx('container')}>
+        
+        {/* {lists.map((list) => ( */}
+
         <div className="container">
         <div className={cx('box')}>
             <div className={cx('card')}> 
                 <div className={cx('icon-card')}>
-   
-                      <img className={cx('img_card')} src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/252020151_121948873591875_3772768744386900456_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=qqbv0ApAIsgAX-EyEZh&_nc_ht=scontent.fsgn2-4.fna&oh=00_AT_uLr970NTVvuTl2Jzy6s-cOkk4TZKteSyrpJrzm8NI_Q&oe=632D0BC3" />
+
+                      <img className={cx('img_card')} src={props.props} />
 
                   <div className={cx("icon1")}>
                      <FontAwesomeIcon icon={faHeart} className={cx("icon")}/>
@@ -32,11 +43,20 @@ const Card = (props) => {
                   <div className={cx("icon3")}>
                   <FontAwesomeIcon icon={faBagShopping} className={cx("icon")}/>
                 </div>
-               
+
+                </div>
+                <div>
+                <span className={cx('title')}> Dried Fruit </span>
+                <h5 className={cx('name')}>Raisin’n’nuts</h5>
+                <div className={cx('Gia')}> 
+                  $30.00 
+                  <span> $30.00  </span>
+                </div>
                 </div>
                 </div>
               </div>
             </div>
+            {/* ))} */}
         </div>
         
      

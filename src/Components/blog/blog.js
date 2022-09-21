@@ -12,7 +12,7 @@ import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg
 
 const cx = classNames.bind(styles)
 
-const Card = (props) => {
+const Blog = (props) => {
 
      return (
     <div className={cx('container')}>
@@ -39,4 +39,4 @@ const Card = (props) => {
      )
 }
 
-export default Card
+export default Blog

@@ -12,7 +12,7 @@ const DefaultLayout = ({ children }) => {
         <div className={cx('container')}>
             <Header />
             {children}
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }

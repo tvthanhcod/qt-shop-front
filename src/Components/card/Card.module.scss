@@ -99,4 +99,25 @@
         height: 270px;
      
     }
+   
+    .title{
+        color: #b2b2b2;
+        font-size: 14px;
+        margin-bottom: 4px;
+        display: block;
+    }
+    .name{
+        color: #1c1c1c;
+        line-height: 1.2;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .Gia{
+        font-size: 17px;
+        span{
+            font-size: 13px;
+            color: #b2b2b2;
+
+        }
+    }
 }
