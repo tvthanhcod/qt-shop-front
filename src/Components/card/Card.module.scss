@@ -12,6 +12,7 @@
         justify-content: center;
         &:hover .icon-card div{
             display: block;
+           
         }
     }
     .icon-card{
@@ -27,35 +28,25 @@
             height: 40px;
             background-color: white;
             border-radius: 100px;
-            animation-name: example;
-            animation-duration: 0.3s;
-            @keyframes example {
-                from {
-                    margin-bottom: -10%;
-                }
-                to {
-                    margin-bottom: 0%;
+         
+            &:hover  {
+              animation-name: pcrotate;
+                animation-duration: 0.3s;
+              @keyframes pcrotate { /* Tạo animation với pcrotate là tên animation */
+                  from { /* Giá trị ban đầu sẽ là rotate(0deg) tức là k quay 1 góc nào cả */
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                     background-color: greenyellow;
 
+                  }
+                  to { /* Giá trị đích là rotate(360deg) tức là quay 1 góc 360 độ */
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                  }
                 }
               }
           
            
-              &:hover  {
-                animation-name: pcrotate;
-                  animation-duration: 0.3s;
-                @keyframes pcrotate { /* Tạo animation với pcrotate là tên animation */
-                    from { /* Giá trị ban đầu sẽ là rotate(0deg) tức là k quay 1 góc nào cả */
-                      -webkit-transform: rotate(0deg);
-                      transform: rotate(0deg);
-                       background-color: greenyellow;
-
-                    }
-                    to { /* Giá trị đích là rotate(360deg) tức là quay 1 góc 360 độ */
-                      -webkit-transform: rotate(360deg);
-                      transform: rotate(360deg);
-                    }
-                  }
-                }
         
               
             // position: absolute;
@@ -97,7 +88,21 @@
     .img_card{
         width: 258px;
         height: 270px;
-     
+  
+        animation-name: example;
+        animation-duration: 0.3s;
+        // animation-delay: 0.4s;
+
+        @keyframes example {
+            from {
+                margin-top: 10%;
+            }
+            to {
+                margin-bottom: 0%;
+
+            }
+          } 
+        
     }
    
     .title{

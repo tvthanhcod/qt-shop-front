@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState, useRef} from "react";
 
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
@@ -19,6 +19,11 @@ import 'nouislider/dist/nouislider.css';
 const cx = classNames.bind(styles)
 
 const ShopPage = () => {
+
+    const ref_slider = useRef()
+    const ref_valueMin = useRef()
+    const ref_valueMax = useRef()
+
 
     const list = [
         { id: 1, departments: 'Fresh Meat'},
@@ -73,27 +78,24 @@ const ShopPage = () => {
 
     useEffect(() => {
     noUiSlider.create(document.getElementById('slider'), {
-        start: [20, 80],
+        start: [40, 80],
         connect: true,    
         range: {
             'min': 0,
             'max': 400
         }
-
-      
     });
 
-    var slider = document.querySelector("#slider");
-    var valueMin = document.querySelector("#kt_slider_basic_min");
-    var valueMax = document.querySelector("#kt_slider_basic_max");
-    slider.noUiSlider.on("update", function (values, handle) {
+    ref_slider.current.noUiSlider.on("update", function (values, handle) {
         if (handle) {
-            valueMax.innerHTML = values[handle];
+            ref_valueMax.current.innerHTML = values[handle];
+            
         } else {
-            valueMin.innerHTML = values[handle];
+            ref_valueMin.current.innerHTML = values[handle];
         }
     });
 })
+
  
 
     return (
@@ -115,18 +117,20 @@ const ShopPage = () => {
                         <h2>Department</h2>
                         <ul>
                             {list.map((item, index) => (
-                                <li key={item.id}> {item.departments} </li>
-                            ))}
+                                <div className={cx('ul_departments')}>
+                                    <li key={item.id}> {item.departments} </li>
+                                </div>
+                        ))}
                         </ul>
                         <h4 className={cx('Price')}>Price</h4>
                 
                         <div >
                         {/* <input type="range" min='0' max='100'  className={cx('range')} /> */}
-                        <div id="slider" className={cx('range')}  >
+                        <div id="slider" className={cx('range')}  ref={ref_slider}>
                             
                         </div>
-                        <div class={cx('text')}> $ <span id="kt_slider_basic_min">  </span> -- $ 
-                          <span id="kt_slider_basic_max"> $ </span></div>
+                        <div class={cx('text')}> $ <span id="kt_slider_basic_min" ref={ref_valueMin}>  </span> -- $ 
+                          <span id="kt_slider_basic_max" ref={ref_valueMax}> $ </span></div>
                      
                         </div>
 
@@ -173,13 +177,15 @@ const ShopPage = () => {
                           ))}
                         </Slider>
                     <hr />
-                    <span>  Sort By </span>
-                    <span className={cx('Default')}> Default </span>
-                    <span className={cx('Products')}> 16 Products found </span>
-                    <span className={cx('icon')}>
+                    <div className={cx('test')}>
+                    <div>  Sort By </div>
+                    <div className={cx('Default')}> Default </div>
+                    <div className={cx('Products')}> 16 Products found </div>
+                    <div className={cx('icon')}>
                         <FontAwesomeIcon icon={faEnvelope} /> &nbsp;&nbsp;
                         <FontAwesomeIcon icon={faBagShopping} />
-                    </span>
+                    </div>
+                    </div>
                     <span>
 
                     </span>

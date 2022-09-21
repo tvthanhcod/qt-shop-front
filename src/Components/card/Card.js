@@ -21,7 +21,6 @@ const Card = (props) => {
   },[])
 
 
-      console.log(props)
      return (
        <div className={cx('container')}>
         
@@ -44,8 +43,8 @@ const Card = (props) => {
                   <FontAwesomeIcon icon={faBagShopping} className={cx("icon")}/>
                 </div>
 
-                </div>
-                <div>
+                </div >
+                <div className={cx('text-card')}>
                 <span className={cx('title')}> Dried Fruit </span>
                 <h5 className={cx('name')}>Raisin’n’nuts</h5>
                 <div className={cx('Gia')}> 
