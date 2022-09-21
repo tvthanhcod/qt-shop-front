@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import classNames from "classnames/bind"
 import styles from "./shoppage.module.scss"
-import  Card  from "../../../Components/card/Card"
+import  Card  from "../../../Components/Card/Card"
 import SlideContext from "../../../Components/SlideContent/SlideContent";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
