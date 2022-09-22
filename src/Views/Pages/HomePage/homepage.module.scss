@@ -13,20 +13,20 @@
             position: relative;
             width: 848px;
             height: 431px;
-    
+
             .banner-description {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 left: 90px;
-
                 .slogan {
                     font-size: 4rem;
                     color: var(--text-color);
                     font-weight: 700;
                 }
 
-                .name-banner, .benefit {
+                .name-banner,
+                .benefit {
                     font-size: 1.6rem;
                 }
                 .name-banner {
@@ -50,14 +50,14 @@
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-top: 40px;
-                    transition: all .5s;
+                    transition: all 0.5s;
                     &:hover {
                         filter: brightness(105%);
                         cursor: pointer;
                     }
                 }
             }
-    
+
             .img {
                 width: 100%;
                 height: 100%;
@@ -113,7 +113,7 @@
             font-size: 2.8rem;
             font-weight: 700;
             &::before {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 0;
                 bottom: -4px;
@@ -150,7 +150,7 @@
     }
     .sub-banner {
         margin: 60px 0;
-        width:100%;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: space-between;
@@ -181,7 +181,7 @@
             font-weight: 700;
             margin: 40px 0;
             &::before {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 0;
                 bottom: -4px;
@@ -198,6 +198,4 @@
             flex-wrap: wrap;
         }
     }
-
-    
 }
