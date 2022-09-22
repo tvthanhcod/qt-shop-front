@@ -133,6 +133,7 @@
                 font-weight: 300;
                 display: flex;
                 justify-content: center;
+                margin-bottom: 40px;
 
                 .tag-product__item {
                     margin: 0 15px;
@@ -168,7 +169,7 @@
     }
     .list-content__box {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .blog {
         width: 100%;
