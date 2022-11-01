@@ -12,7 +12,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFacebook, faTwitter, faInstagram, faBluetooth } from '@fortawesome/free-brands-svg-icons';
 
+import { Link, useNavigate } from 'react-router-dom';
+
 import Card from '../../../Components/Card/Card';
+
 
 
 // import { FaStar } from "react-icons/fa";
@@ -139,7 +142,9 @@ function ChiTiet() {
                                     <button onClick={() => handerCong()}>+</button>
                                 </div>
                                 <div className={cx('AddCard')}>
-                                    <button >ADD TO CARD</button>
+                                    <Link to={`/card/${slug.slug}`} >
+                                        <button >ADD TO CARD</button>
+                                    </Link>
                                 </div>
                             </div>
 
