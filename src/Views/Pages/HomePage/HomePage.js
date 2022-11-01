@@ -119,7 +119,7 @@ const HomePage = () => {
                             {select.map((item) => {
                                 return (
                                     <li
-                                        ref={buttonRef}
+                                        // ref={buttonRef}
                                         key={item.id}
                                         className={cx('tag-product__item')}
                                         onClick={() => handleSelect(item.item)}
