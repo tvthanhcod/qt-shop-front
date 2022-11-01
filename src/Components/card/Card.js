@@ -5,6 +5,9 @@ import classNames from 'classnames/bind';
 import styles from './Card.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom"
+
 import { faBagShopping, faBars, faChevronDown, faEnvelope, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -20,12 +23,14 @@ const Card = (props) => {
     return (
         <div className={cx('container')}>
             {/* {lists.map((list) => ( */}
-
             <div className="container">
                 <div className={cx('box')}>
                     <div className={cx('card')}>
                         <div className={cx('icon-card')}>
-                            <img className={cx('img_card')} src={props.props.img} />
+                            <Link to={`/chitiet/${props.props.id}`} >
+
+                                <img className={cx('img_card')} src={props.props.img} />
+                            </Link >
 
                             <div className={cx('icon1')}>
                                 <FontAwesomeIcon icon={faHeart} className={cx('icon')} />
@@ -37,9 +42,9 @@ const Card = (props) => {
                                 <FontAwesomeIcon icon={faBagShopping} className={cx('icon')} />
                             </div>
                         </div>
-                        <div className={cx('text-card')}>
-                            <span className={cx('title')}> Dried Fruit </span>
-                            <h5 className={cx('name')}>Raisin’n’nuts</h5>
+                        <div className={cx('text-card')} >
+                            <span className={cx('title')} > Dried Fruit </span>
+                            <h5 className={cx('name')} >Raisin’n’nuts</h5>
                             <div className={cx('Gia')}>
                                 {props.props.Price}
                                 <span> ${props.props.Price} </span>
@@ -49,7 +54,7 @@ const Card = (props) => {
                 </div>
             </div>
             {/* ))} */}
-        </div>
+        </div >
     );
 };
 

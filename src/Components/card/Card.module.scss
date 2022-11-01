@@ -7,20 +7,31 @@
     width: 300px;
     height: 300px;
     margin-bottom: 70px;
+    color: black;
+
+
     .card {
         position: relative;
         text-align: center;
         justify-content: center;
+        text-decoration: none;
+        color: black;
+        text-decoration: none;
+        color: black;
+        list-style: none;
+
         &:hover .icon-card div {
             display: block;
         }
     }
+
     .icon-card {
         width: 100%;
         position: relative;
         display: flex;
         text-align: center;
         justify-content: center;
+
         div {
             display: none;
             z-index: 1;
@@ -32,7 +43,9 @@
             &:hover {
                 animation-name: pcrotate;
                 animation-duration: 0.3s;
+
                 @keyframes pcrotate {
+
                     /* Tạo animation với pcrotate là tên animation */
                     from {
                         /* Giá trị ban đầu sẽ là rotate(0deg) tức là k quay 1 góc nào cả */
@@ -40,6 +53,7 @@
                         transform: rotate(0deg);
                         background-color: greenyellow;
                     }
+
                     to {
                         /* Giá trị đích là rotate(360deg) tức là quay 1 góc 360 độ */
                         -webkit-transform: rotate(360deg);
@@ -60,6 +74,7 @@
             text-align: center;
             justify-content: center;
         }
+
         .icon2 {
             z-index: 1;
             font-size: 20px;
@@ -69,6 +84,7 @@
             text-align: center;
             justify-content: center;
         }
+
         .icon3 {
             z-index: 1;
             font-size: 20px;
@@ -78,11 +94,13 @@
             text-align: center;
             justify-content: center;
         }
+
         .icon {
             margin-top: 11px;
             // margin-left: 10px;
         }
     }
+
     .img_card {
         width: 258px;
         height: 270px;
@@ -91,10 +109,12 @@
         animation-duration: 0.3s;
         // animation-delay: 0.4s;
 
+
         @keyframes example {
             from {
                 margin-top: 10%;
             }
+
             to {
                 margin-bottom: 0%;
             }
@@ -106,15 +126,23 @@
         font-size: 14px;
         margin-bottom: 4px;
         display: block;
+
+        text-decoration: none;
+        list-style: none;
+
     }
+
     .name {
         color: #1c1c1c;
         line-height: 1.2;
         font-size: 18px;
         margin-bottom: 5px;
+
     }
+
     .Gia {
         font-size: 17px;
+
         span {
             font-size: 13px;
             color: #b2b2b2;
