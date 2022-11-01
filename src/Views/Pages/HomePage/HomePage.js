@@ -32,7 +32,7 @@ const HomePage = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 4.5,
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,

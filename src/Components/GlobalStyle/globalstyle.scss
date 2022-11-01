@@ -27,4 +27,19 @@ html {
     max-width: 1200px;
     margin: 0 auto;
 }
+.slick-slide {
+   width: 292.5px !important;
+
+   margin-left: 10px;
+
+   &:first-child {
+    margin-left: 0;
+   }
+}
+
+// .slick-list {
+//     margin: 0 -10px !important;
+// }
+
+
 

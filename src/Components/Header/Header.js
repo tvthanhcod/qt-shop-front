@@ -13,7 +13,7 @@ import styles from "./header.module.scss"
 const cx = classNames.bind(styles)
 const Header = () => {
 
-    const [isActive, setIsActive] = useState(false)
+    const [isActive, setIsActive] = useState(true)
     // const [selected, setSelected] = useState('')
 
     const handleSelectDepartments = (item) => {
